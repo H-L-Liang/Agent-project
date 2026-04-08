@@ -1,0 +1,558 @@
+2026-04-08 13:58:58,368 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 62, in get_file_documents
+    return pdf_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 59, in pdf_loader
+    return PyPDFLoader(filepath,passwd).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+        "`pypdf` package not found, please install it with `pip install pypdf`"
+    )
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-08 13:58:58,399 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt
+2026-04-08 13:58:58,411 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt
+2026-04-08 13:58:58,416 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt
+2026-04-08 13:58:58,421 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt
+2026-04-08 13:58:58,428 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt
+2026-04-08 13:59:51,173 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问.pdf加载失败：status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 93, in load_document
+    self.vector_store.add_documents(split_document)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+        self, input=texts, text_type="document", model=self.model
+    )
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+  File "D:\Anaconda3\Lib\site-packages\tenacity\__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "D:\Anaconda3\Lib\site-packages\tenacity\__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "D:\Anaconda3\Lib\site-packages\tenacity\__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "D:\Anaconda3\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda3\Lib\site-packages\tenacity\__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-04-08 13:59:51,181 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt
+2026-04-08 13:59:51,184 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt
+2026-04-08 13:59:51,187 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt
+2026-04-08 13:59:51,189 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt
+2026-04-08 13:59:51,191 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt
+2026-04-08 14:00:39,263 - agent - INFO - vector_store.py:99 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问.pdf内容加载成功
+2026-04-08 14:00:39,272 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt
+2026-04-08 14:00:39,273 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt
+2026-04-08 14:00:39,274 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt
+2026-04-08 14:00:39,275 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt
+2026-04-08 14:00:39,276 - agent - ERROR - vector_store.py:103 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt加载失败：Error loading C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt
+Traceback (most recent call last):
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 80, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LHL\Desktop\Agent-project\rag\vector_store.py", line 59, in get_file_documents
+    return txt_loader(read_path)
+  File "C:\Users\LHL\Desktop\Agent-project\utils\file_handler.py", line 63, in txt_loader
+    return TextLoader(filepath).load()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "C:\Users\LHL\AppData\Roaming\Python\Python313\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt
+2026-04-08 14:01:53,411 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-08 14:01:59,105 - agent - INFO - vector_store.py:99 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt内容加载成功
+2026-04-08 14:02:04,330 - agent - INFO - vector_store.py:99 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-08 14:02:17,503 - agent - INFO - vector_store.py:99 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt内容加载成功
+2026-04-08 14:02:23,017 - agent - INFO - vector_store.py:99 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt内容加载成功
+2026-04-08 14:02:28,911 - agent - INFO - vector_store.py:99 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt内容加载成功
+2026-04-08 14:03:14,449 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-08 14:03:14,449 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-08 14:03:14,450 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-08 14:03:14,451 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-08 14:03:14,451 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-08 14:03:14,452 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-08 14:05:24,864 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-08 14:05:24,865 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-08 14:05:24,865 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-08 14:05:24,866 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-08 14:05:24,866 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-08 14:05:24,866 - agent - INFO - vector_store.py:76 - [加载知识库]C:\Users\LHL\Desktop\Agent-project\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-08 18:59:36,370 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-08 18:59:36,370 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区气温下如何保养
+2026-04-08 18:59:39,302 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-04-08 18:59:39,302 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 18:59:39,303 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-04-08 18:59:39,305 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-08 18:59:39,305 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 广州
+2026-04-08 18:59:41,879 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-04-08 18:59:41,880 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '广州'}
+2026-04-08 18:59:41,882 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-04-08 18:59:41,884 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-08 18:59:41,885 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市广州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，最近6小时降雨概率低
+2026-04-08 18:59:45,852 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 18:59:45,852 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人在26摄氏度、50%湿度环境下的保养方法'}
+2026-04-08 18:59:48,258 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 18:59:48,260 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-08 18:59:48,261 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人在26摄氏度、50%湿度环境下的具体保养方法。
+2026-04-08 18:59:51,529 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 18:59:51,530 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人日常保养维护方法'}
+2026-04-08 18:59:55,359 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 18:59:55,362 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-08 18:59:55,362 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 定期清理尘盒、滤网和滚刷，检查并清除缠绕在滚刷和边刷上的毛发或杂物；保持传感器清洁；及时更换磨损的配件如滤网、边刷和滚刷；避免长时间暴晒或潮湿环境存放；按照说明书建议进行电池维护。
+2026-04-08 19:04:57,274 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-08 19:04:57,275 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 生成我的报告
+2026-04-08 19:04:59,635 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_id
+2026-04-08 19:04:59,636 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:04:59,637 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_id调用成功
+2026-04-08 19:04:59,640 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-08 19:04:59,640 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 09
+2026-04-08 19:05:01,705 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_current_month
+2026-04-08 19:05:01,705 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:05:01,706 - agent - INFO - middleware.py:24 - [tool monitor]工具get_current_month调用成功
+2026-04-08 19:05:01,707 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-08 19:05:01,708 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 2026-05
+2026-04-08 19:05:03,243 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fill_context_for_report
+2026-04-08 19:05:03,244 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:05:03,246 - agent - INFO - middleware.py:24 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-08 19:05:03,248 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-08 19:05:03,249 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-08 19:05:05,896 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fetch_external_data
+2026-04-08 19:05:05,896 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'user_id': '09', 'month': '2026-05'}
+2026-04-08 19:05:05,898 - agent - INFO - middleware.py:24 - [tool monitor]工具fetch_external_data调用成功
+2026-04-08 19:05:05,899 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-08 19:05:05,900 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | {'特征': '80㎡两居 | 养宠 | 仿实木', '效率': '宠物毛发清理:91%\\n自动回充成功率:96%', '耗材': '胶刷缠绕:无\\n滤网寿命:剩余45天', '对比': '养宠家庭中清洁效率前15%'}
+2026-04-08 19:05:08,344 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:05:08,345 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '养宠家庭扫地机器人使用建议和保养方法'}
+2026-04-08 19:05:13,551 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:05:13,554 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有11条消息。
+2026-04-08 19:05:13,554 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 养宠家庭使用扫地机器人时，建议选择具备强劲吸力、防缠绕滚刷和高效过滤系统（如HEPA滤网）的机型，以有效清理宠物毛发并减少过敏原。日常使用中应每日清理尘盒和滚刷上的毛发，定期清洗或更换滤网，检查边刷和传感器是否被毛发缠绕，并保持充电座周围清洁无障碍物。长期不用时应断电存放于干燥处。
+2026-04-08 19:05:15,302 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:05:15,303 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人滤网更换周期和保养方法'}
+2026-04-08 19:05:19,374 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:05:19,377 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有13条消息。
+2026-04-08 19:05:19,377 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 扫地机器人滤网建议每2-3个月更换一次，若使用频率高或环境灰尘较多，可适当缩短周期。保养时应定期取出滤网轻拍或用软毛刷清理表面灰尘，避免水洗（除非标明可水洗），确保滤网干燥后再装回。
+2026-04-08 19:25:43,718 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-08 19:25:43,719 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 在我所在的位置下，如何保养机器人
+2026-04-08 19:25:47,755 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-04-08 19:25:47,755 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:25:47,757 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-04-08 19:25:47,759 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-08 19:25:47,759 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 中山
+2026-04-08 19:25:51,651 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-04-08 19:25:51,651 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '中山'}
+2026-04-08 19:25:51,653 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-04-08 19:25:51,655 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-08 19:25:51,655 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市中山天气为晴天，气温26摄氏度，空气湿度50%，南风1级，最近6小时降雨概率低
+2026-04-08 19:25:55,456 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:25:55,456 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人日常保养维护指南'}
+2026-04-08 19:25:59,749 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:25:59,751 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-08 19:25:59,751 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 扫地机器人日常保养维护包括：定期清理尘盒和滤网，避免灰尘堆积影响吸力；检查并清理滚刷和边刷上的缠绕物，如毛发或线头；擦拭传感器和充电触点，确保正常工作；定期检查轮子是否被异物卡住；根据使用频率每1-3个月更换滤网；长时间不用时应关闭电源并存放于干燥处。
+2026-04-08 19:28:08,403 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-08 19:28:08,404 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 在我城市当前天气下，机器人如何保养
+2026-04-08 19:28:13,494 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-04-08 19:28:13,495 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:28:13,496 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-04-08 19:28:13,498 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-08 19:28:13,499 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 广州
+2026-04-08 19:28:16,863 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-04-08 19:28:16,863 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '广州'}
+2026-04-08 19:28:16,864 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-04-08 19:28:16,865 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-08 19:28:16,865 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市广州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，最近6小时降雨概率低
+2026-04-08 19:28:21,127 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:28:21,128 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人在温暖干燥或中等湿度环境下的保养方法'}
+2026-04-08 19:28:25,006 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:28:25,027 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-08 19:28:25,031 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 在温暖干燥或中等湿度环境下，应定期清理扫地机器人的尘盒、滤网和滚刷，避免灰尘堆积影响性能；保持传感器清洁，防止误判；存放时置于阴凉通风处，避免高温暴晒；长期不用时取出电池并断电保存。
+2026-04-08 19:30:28,287 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-08 19:30:28,287 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 在我城市当前天气下，机器人如何保养
+2026-04-08 19:30:31,407 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-04-08 19:30:31,407 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:30:31,408 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-04-08 19:30:31,441 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-08 19:30:31,443 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 广州
+2026-04-08 19:30:34,544 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-04-08 19:30:34,546 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '广州'}
+2026-04-08 19:30:34,547 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-04-08 19:30:35,002 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-08 19:30:35,002 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市广州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，最近6小时降雨概率低
+2026-04-08 19:30:40,556 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:30:40,557 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人在晴天26度50%湿度环境下的保养方法'}
+2026-04-08 19:30:43,133 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:30:43,528 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-08 19:30:43,529 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人在晴天26度50%湿度环境下的具体保养方法。
+2026-04-08 19:30:46,671 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:30:46,671 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人日常保养方法'}
+2026-04-08 19:30:50,974 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:30:51,592 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-08 19:30:51,592 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 定期清理滚刷和边刷上的缠绕物，清空尘盒，擦拭传感器，检查并清理滤网，确保充电触点清洁，避免在潮湿或有水区域使用。
+2026-04-08 19:31:18,907 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-08 19:31:18,907 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 生成使用报告
+2026-04-08 19:31:22,146 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_id
+2026-04-08 19:31:22,146 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:31:22,148 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_id调用成功
+2026-04-08 19:31:22,181 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-08 19:31:22,181 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 02
+2026-04-08 19:31:23,930 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_current_month
+2026-04-08 19:31:23,931 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:31:23,933 - agent - INFO - middleware.py:24 - [tool monitor]工具get_current_month调用成功
+2026-04-08 19:31:24,022 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-08 19:31:24,022 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 2026-05
+2026-04-08 19:31:25,562 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fill_context_for_report
+2026-04-08 19:31:25,563 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-08 19:31:25,564 - agent - INFO - middleware.py:24 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-08 19:31:25,856 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-04-08 19:31:25,857 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-08 19:31:28,989 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fetch_external_data
+2026-04-08 19:31:28,989 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'user_id': '02', 'month': '2026-05'}
+2026-04-08 19:31:28,991 - agent - INFO - middleware.py:24 - [tool monitor]工具fetch_external_data调用成功
+2026-04-08 19:31:30,181 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有9条消息。
+2026-04-08 19:31:30,181 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | {'特征': '70㎡公寓 | 情侣 | 瓷砖', '效率': '覆盖率:90%\\n避障失败:0次/周', '耗材': '边刷寿命:剩余50天\\n尘盒清理:每4天', '对比': '拖地功能使用率优于同类10%'}
+2026-04-08 19:31:32,817 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:31:32,817 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人边刷更换周期和尘盒清理频率'}
+2026-04-08 19:31:35,268 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:31:35,629 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有11条消息。
+2026-04-08 19:31:35,629 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 边刷建议每3-6个月更换一次，尘盒每次使用后应清空，并定期清洗。
+2026-04-08 19:31:37,516 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-04-08 19:31:37,517 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '瓷砖地面扫地机器人使用建议'}
+2026-04-08 19:31:41,942 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-04-08 19:31:42,854 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有13条消息。
+2026-04-08 19:31:42,855 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 瓷砖地面使用扫地机器人时，建议选择带有滚刷和边刷的机型以提升清洁效果，定期清理尘盒和滤网，避免水渍残留导致打滑，同时确保地面无尖锐杂物以防损伤机器人底部传感器或轮子。

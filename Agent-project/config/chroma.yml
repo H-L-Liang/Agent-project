@@ -1,0 +1,14 @@
+#chroma配置文件
+
+collection_name: agent
+persist_directory: chroma_db
+k: 3  #向量检索时的匹配结果，可以返回k条相关结果
+data_path: data
+md5_hex_store: md5.text   #已处理文件
+allow_knowledge_file_type: ["txt", "pdf"]  #表示运行这些后缀的文件加入到向量数据库里面
+
+
+#文本分割器配置
+chunk_size: 200
+chunk_overlap: 20    #重叠字符数
+separators: ["\n\n", "\n", ".", "!", "?", "。", "！", "？", " ", ""]    #分隔符

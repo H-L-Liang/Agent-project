@@ -1,0 +1,7 @@
+2026-04-06 21:20:58,695 - agent - INFO - logger_handler.py:61 - 信息日志
+2026-04-06 21:20:58,695 - agent - ERROR - logger_handler.py:62 - 错误日志
+2026-04-06 21:20:58,695 - agent - WARNING - logger_handler.py:63 - 警告日志
+2026-04-06 21:20:58,695 - agent - DEBUG - logger_handler.py:64 - 调试日志
+2026-04-06 23:01:20,737 - agent - ERROR - prompt_loader.py:18 - [load_system_prompts]解析系统提示词出错，[Errno 2] No such file or directory: 'c:\\Users\\LHL\\Desktop\\Agent-project\\prompts/main_prompt.text'
+2026-04-06 23:01:59,463 - agent - ERROR - prompt_loader.py:18 - [load_system_prompts]解析系统提示词出错，[Errno 2] No such file or directory: 'c:\\Users\\LHL\\Desktop\\Agent-project\\prompts/main_prompt.text'
+2026-04-06 23:05:53,978 - agent - ERROR - prompt_loader.py:18 - [load_system_prompts]解析系统提示词出错，[Errno 2] No such file or directory: 'c:\\Users\\LHL\\Desktop\\Agent-project\\prompts/main_prompt.text'
